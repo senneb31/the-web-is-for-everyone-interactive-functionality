@@ -1,0 +1,111 @@
+{% render 'partials/head.liquid' %}
+
+<main class="general">
+
+
+    <section class="products-home">
+
+        {% for item in items %}
+        {% if forloop.index == 2 %}
+        <div class="wrapper-register">
+            <h1 class="text-register">Create a list for your best friend</h1>
+            <img class="img-person-regsiter" src="/assets/persoonregister.svg" alt="">
+            <img class="img-bloem-register" src="/assets/bloem.svg" alt="">
+            <a class="register-btn" href="#">Register or log in</a>
+        </div>
+        {% endif %}
+        {% include 'partials/card.liquid' with item, size: 'large' %}
+        {% endfor %}
+    </section>
+
+    <form class="filter-chat">
+        <fieldset>
+            <legend>I'm looking for a gift for...</legend>
+            <div class="wrapper-filter">
+                <select name="person" id="person">
+                    <option value="">Who is him/her/other</option>
+                    <option value="sister">Sister</option>
+                    <option value="brother">Brother</option>
+                    <option value="mother">Mother</option>
+                    <option value="father">Father</option>
+                    <option value="stepmother">Stepmother</option>
+                    <option value="stepfather">Stepfather</option>
+                    <option value="grandmother">Grandmother</option>
+                    <option value="grandfather">Grandfather</option>
+                    <option value="son">Son</option>
+                    <option value="daughter">Daughter</option>
+                    <option value="step_son">Step-son</option>
+                    <option value="step_daughter">Step-daughter</option>
+                    <option value="uncle">Uncle</option>
+                    <option value="aunt">Aunt</option>
+                    <option value="cousin">Cousin</option>
+                    <option value="nephew">Nephew</option>
+                    <option value="niece">Niece</option>
+                    <option value="boyfriend">Boyfriend</option>
+                    <option value="girlfriend">Girlfriend</option>
+                    <option value="wife">Wife</option>
+                    <option value="husband">Husband</option>
+                    <option value="fiance">Fiancé(e)</option>
+                    <option value="partner">Partner</option>
+                    <option value="friend">Friend</option>
+                    <option value="best_friend">Best Friend</option>
+                    <option value="colleague">Colleague</option>
+                    <option value="boss">Boss</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="mentor">Mentor</option>
+                    <option value="coach">Coach</option>
+                    <option value="neighbor">Neighbor</option>
+                    <option value="pet">Pet</option>
+                </select>
+                <input type="number" id="age" name="age" min="0" max="150" placeholder="age">
+                <select name="occasion" id="occasion">
+                    <option value="">For which occasion</option>
+                    <option value="birthday">Birthday</option>
+                    <option value="anniversary">Anniversary</option>
+                    <option value="wedding">Wedding</option>
+                    <option value="engagement">Engagement</option>
+                    <option value="graduation">Graduation</option>
+                    <option value="baby_shower">Baby Shower</option>
+                    <option value="new_baby">New Baby</option>
+                    <option value="housewarming">Housewarming</option>
+                    <option value="promotion">Promotion</option>
+                    <option value="retirement">Retirement</option>
+                    <option value="valentine">Valentine's Day</option>
+                    <option value="christmas">Christmas</option>
+                    <option value="easter">Easter</option>
+                    <option value="thanksgiving">Thanksgiving</option>
+                    <option value="halloween">Halloween</option>
+                    <option value="new_year">New Year's Eve</option>
+                    <option value="father_day">Father's Day</option>
+                    <option value="mother_day">Mother's Day</option>
+                    <option value="friendship_day">Friendship Day</option>
+                    <option value="get_well">Get Well Soon</option>
+                    <option value="thank_you">Thank You</option>
+                    <option value="just_because">Just Because</option>
+                    <option value="apology">Apology</option>
+                    <option value="goodbye">Goodbye/Farewell</option>
+                    <option value="welcome">Welcome Gift</option>
+                    <option value="back_to_school">Back to School</option>
+                    <option value="graduation">Graduation</option>
+                    <option value="first_day_work">First Day at Work</option>
+                </select>
+            </div>
+
+            <div class="wrapper-chat">
+                <div class="container-search">
+                    <label class="text-chat" for="search">I'm looking for a gift for...</label>
+                    <div class="chat-input">
+                        <input type="chat" id="chat" name="chat" />
+                        <button class="to-chat-btn"><img class="search" src="/assets/zoekicoon.svg" alt="search"></button>
+                    </div>
+                </div>
+                <div class="wrapper-spotters-join">
+                    <!--<img class="spotters-invite-img" src="/assets/spotters.svg" alt="spotters">-->
+                    <h2>Join our community of spotters</h2>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</main>
+
+{% render 'partials/foot.liquid' %}

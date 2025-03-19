@@ -1,0 +1,145 @@
+{% render 'partials/head.liquid', title: item.name %}
+
+<main class="product">
+
+    <a class="go-back" href="/"><img class="back-img" src="/assets/back.svg" alt="back">Back</a>
+
+    <h1 class="titel-product">{{ item.name }}</h1>
+    <div class="wrapper-extra-product-info">
+        <img class="spotters-item-img" src="/assets/persoons.svg" alt="spotters">
+        <p class="item-saved">+30 saved</p>
+        <img class="item-cadeau-img" src="/assets/cadeau.svg" alt="cadeau">
+        <p class="item-gived">+4 gived</p>
+    </div>
+
+    <img class="item-product-img" src="{{ item.image }}" alt="{{ item.name }}">
+
+    <button class="to-favourite-btn">Add to <img class="favourite-img" src="/assets/favourite2.svg"
+            alt="favourite"></button>
+
+    <div class="description">
+        <p class="product-description">{{ item.description }}</p>
+
+        <div class="divider"></div>
+
+        <div class="whapper-extra-info">
+            <img class="why-this-gift-img" src="/assets/vierkantvraag.svg" alt="">
+            <p class="why-this-gift">WHY THIS GIFT The glue is non-toxic, so it's safe to eat or drink off repaired
+                items. To retain the gold
+                colour it is not advised to place items in the dishwasher.</p>
+            <img class="good-to-now-img" src="/assets/hand.svg" alt="">
+            <p class="good-to-now">GOOD TO KNOW One kit can repair approximately eight normal plates as per the
+                images,
+                with 3 full cracks.
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <img class="smiles-img" src="/assets/smile.svg" alt="">
+        <p class="smiley-text">wooow surprise factor</p>
+        <img class="gift-status-img" src="/assets/vierkantgoed.svg" alt="">
+        <p class="gift-status-trashed">doom to be trashed</p>
+        <img class="gift-status-img" src="/assets/vierkantbest.svg" alt="">
+        <p class="gift-status-new">new</p>
+
+        <div class="divider"></div>
+
+        <h2 class="product-sidebar">Where to buy</h2>
+
+        <article class="wrapper-shop">
+            <div class="shop-info">
+                <a class="to-the-shop" href="{{ item.shop_url }}">
+                    <img class="product-img" src="{{ item.image }}" width="150" height="130" alt="">
+                    <button class="shopping-card-btn"><img class="shopping-card" src="/assets/shoppingcart.svg"
+                            alt="shooping card"></button>
+                    <h3 class="shop-name">{{ item.name }}</h3>
+                </a>
+                <p class="price">{{ item.amount }}</p>
+                <div class="wrapper-company">
+                    <img class="logo-company" src="/assets/logo-bedrijf.svg" alt="logo bedrijf">
+                    <p class="the-shop">Decathlon</p>
+                </div>
+            </div>
+
+            <div class="shop-info">
+                <a class="to-the-shop" href="{{ item.shop_url }}">
+                    <img class="product-img" src="{{ item.image }}" width="150" height="130" alt="">
+                    <button class="shopping-card-btn"><img class="shopping-card" src="/assets/shoppingcart.svg"
+                            alt="shooping card"></button>
+                    <h3 class="shop-name">{{ item.name }}</h3>
+                </a>
+                <p class="price">{{ item.amount }}</p>
+                <div class="wrapper-company">
+                    <img class="logo-company" src="/assets/logo-bedrijf2.svg" alt="logo bedrijf">
+                    <p class="the-shop">Amazon.it</p>
+                </div>
+            </div>
+
+            <div class="shop-info">
+                <a class="to-the-shop" href="{{ item.shop_url }}">
+                    <img class="product-img" src="{{ item.image }}" width="150" height="130" alt="">
+                    <button class="shopping-card-btn"><img class="shopping-card" src="/assets/shoppingcart.svg"
+                            alt="shooping card"></button>
+                    <h3 class="shop-name">{{ item.name }}</h3>
+                </a>
+                <p class="price">{{ item.amount }}</p>
+                <div class="wrapper-company">
+                    <img class="logo-company" src="/assets/logo-bedrijf3.svg" alt="logo bedrijf">
+                    <p class="the-shop">Ebay.com</p>
+                </div>
+            </div>
+
+            <div class="shop-info">
+                <a class="to-the-shop" href="{{ item.shop_url }}">
+                    <img class="product-img" src="{{ item.image }}" width="150" height="130" alt="">
+                    <button class="shopping-card-btn"><img class="shopping-card" src="/assets/shoppingcart.svg"
+                            alt="shooping card"></button>
+                    <h3 class="shop-name">{{ item.name }}</h3>
+                </a>
+                <p class="price">{{ item.amount }}</p>
+                <div class="wrapper-company">
+                    <img class="logo-company" src="/assets/logo-bedrijf.svg" alt="logo bedrijf">
+                    <p class="the-shop">Decathlon</p>
+                </div>
+            </div>
+
+            <div class="shop-info">
+                <a class="to-the-shop" href="{{ item.shop_url }}">
+                    <img class="product-img" src="{{ item.image }}" width="150" height="130" alt="">
+                    <button class="shopping-card-btn"><img class="shopping-card" src="/assets/shoppingcart.svg"
+                            alt="shooping card"></button>
+                    <h3 class="shop-name">{{ item.name }}</h3>
+                </a>
+                <p class="price">{{ item.amount }}</p>
+                <div class="wrapper-company">
+                    <img class="logo-company" src="/assets/logo-bedrijf2.svg" alt="logo bedrijf">
+                    <p class="the-shop">Amazon.it</p>
+                </div>
+            </div>
+
+            <div class="shop-info">
+                <a class="to-the-shop" href="{{ item.shop_url }}">
+                    <img class="product-img" src="{{ item.image }}" width="150" height="130" alt="">
+                    <button class="shopping-card-btn"><img class="shopping-card" src="/assets/shoppingcart.svg"
+                            alt="shooping card"></button>
+                    <h3 class="shop-name">{{ item.name }}</h3>
+                </a>
+                <p class="price">{{ item.amount }}</p>
+                <div class="wrapper-company">
+                    <img class="logo-company" src="/assets/logo-bedrijf3.svg" alt="logo bedrijf">
+                    <p class="the-shop">Ebay.com</p>
+                </div>
+            </div>
+        </article>
+
+        <h2 class="product-sidebar">You may also like</h2>
+        <article class="products-detail">
+            {% for item in items %}
+            {% include 'partials/card.liquid' with item, size: 'small' %}
+            {% endfor %}
+        </article>
+    </div>
+</main>
+
+{% render 'partials/footer.liquid' %}
