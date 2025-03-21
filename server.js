@@ -53,10 +53,20 @@ app.get('/cadeau/:slug', async function (request, response) {
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 // Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt
 app.post('/', async function (request, response) {
+//app.post('/:itemId', async function (request, response) {
+ 
+//  await fetch('https://fdnd-agency.directus.app/items/milledoni_users_milledoni_products', {
+  //  method: 'POST',
+    //body: JSON.stringify({
+      //  milledoni_products_id: request.params.itemId,
+        //milledoni_users_id: 4
+    //}),
+    //headers: {
+      //  'Content-Type': 'application/json; charset=UTF-8'
+    //}
+//});
   // Je zou hier data kunnen opslaan, of veranderen, of wat je maar wilt
   // Er is nog geen afhandeling van een POST, dus stuur de bezoeker terug naar /
-  response.redirect(303, '/')
-})
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000, als dit ergens gehost wordt, is het waarschijnlijk poort 80
