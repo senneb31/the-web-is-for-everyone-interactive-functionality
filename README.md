@@ -13,7 +13,7 @@
   * [Licentie](#licentie)
 
 ## Beschrijving
-Het project Milledoni is een website die de gebruiker helpt bij het zoeken naar een passend cadeau voor een vriend, vriendin, familielid, etc. De website ondersteund een AI chat functie die je helpt om een geschikt cadeau te zoeken. 
+Milledoni is een website die klanten helpt bij het vinden van het perfecte cadeau voor elke gelegenheid. Van verjaardagen tot feestdagen, onze website biedt een breed scala aan cadeau-opties voor mannen, vrouwen, kinderen en bedrijven. We bieden een gebruiksvriendelijke ervaring met handige zoekfilters, cadeau-inspiratie en gepersonaliseerde aanbevelingen. De website is momenteel bezig met het implementeren van een nieuw design om de gebruikerservaring te verbeteren en de navigatie te vereenvoudigen.
 
 <img width="1440" alt="Scherm­afbeelding 2025-03-12 om 12 31 01" src="https://github.com/user-attachments/assets/38e9c387-d3fe-4238-a86a-5702701cdcee" />
 <!-- Voeg een link toe naar Github Pages 🌐-->
