@@ -1,4 +1,4 @@
-{% render 'partials/head.liquid' %}
+{% render 'views/partials/head.liquid' %}
 
 <main class="general">
 
@@ -14,7 +14,7 @@
             <a class="register-btn" href="#">Register or log in</a>
         </div>
         {% endif %}
-        {% include 'partials/card.liquid' with item, size: 'large' %}
+        {% include 'views/partials/card.liquid' with item, size: 'large' %}
         {% endfor %}
     </section>
 
@@ -108,4 +108,4 @@
     </form>
 </main>
 
-{% render 'partials/foot.liquid' %}
+{% render 'views/partials/foot.liquid' %}
