@@ -110,3 +110,6 @@ app.use((req, res, next) => {
   res.status(404).send("Deze pagina bestaat niet!")
 })
 
+app.use((req, res, next) => {
+  res.status(404).send("Deze pagina bestaat niet!")
+})
