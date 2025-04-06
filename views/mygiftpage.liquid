@@ -1,0 +1,23 @@
+{% render 'views/partials/head.liquid', %}
+
+<main>
+    <section class="liked-gifts">
+        <h2>Your Saved Gifts</h2>
+            {% for gift in savedGifts | compact %}
+                <article class="gift-Box">
+                    <a href="/gift/{{ item.productDetails.id }}">
+                        <img src="{{ item.productDetails.image }}" alt="">
+                        <h3>{{ item.productDetails.name }}</h3>
+                        <p>{{ item.productDetails.spotter }}</p>
+                        <img src="/images/girl1.png" alt=""><img src="/images/user1.png" alt=""><p>+{{ gift.productDetails.saved }}<p>Saved</p>
+                        <img src="/images/gifticon.png" alt=""><p>+{{ gift.productDetails.given }}Given</p>
+                    </a>
+                </article>
+            {% else %}
+                <h2>No saved gifts yet</h2>
+                <p>Go to our homepage and search yourself some gifts. If you like them, add them!</p>
+            {% endfor %}
+    </section>
+</main>
+
+    
