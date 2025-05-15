@@ -736,4 +736,43 @@ legend {
     overflow-x: scroll;
     white-space: nowrap;
     display: flex;
+.div-error {
+    width: 500px;
+    height: 100px;
+    display: grid;
+    justify-items: center;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.error-logo{
+    opacity: 25%;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    bottom: -150%;
+}
+
+.error-h1{
+        font-family: 'Parkinsans';
+        src: url('/font/Parkinsans-Regular.ttf');
+        font-weight: 800;
+        font-size: 128px;
+}
+
+.error-p{
+    font-family: 'Parkinsans';
+    src: url('/font/Parkinsans-Regular.ttf');
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.error-a{
+    font-family: 'Parkinsans';
+    src: url('/font/Parkinsans-Regular.ttf');
+    font-weight: 400;
 }
