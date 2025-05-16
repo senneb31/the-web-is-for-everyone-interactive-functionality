@@ -66,6 +66,38 @@ app.post('/:itemId', async function (request, response) {
         'Content-Type': 'application/json; charset=UTF-8'
     }
 });
+app.post('/savedgifts/:giftId', async function (request, response) {
+
+  const savedProductsURL = 'https://fdnd-agency.directus.app/items/milledoni_users_milledoni_products';
+
+  const idRes = await fetch(`${savedProductsURL}?filter={"milledoni_products_id":${request.params.giftId},"milledoni_users_id":${userID}}`); //Request paramsID
+  const idJson = await idRes.json();
+
+  // Ik check met de if statement of er al een cadeau in de database staat met hetzelfde ID, als dat zo is dan wordt het verwijderd uit de database.
+  // Als er dus niets met een een matchend ID in de database staat. Dan wordt er een product met dat ID toegevoegd aan Directus.
+  console.log(idJson)
+  if (idJson.data.length > 0) {
+    const id = idJson.data[0].id;
+   
+    await fetch(`${savedProductsURL}/${id}`, {
+      method: 'DELETE',
+        headers: {
+        'Content-Type': 'application/json;charset=UTF-8'
+        }
+    });
+  } else {
+     await fetch('https://fdnd-agency.directus.app/items/milledoni_users_milledoni_products', {
+        method: 'POST',
+        body: JSON.stringify({
+            milledoni_products_id: request.params.giftId,
+            milledoni_users_id: 4
+            // Ik geef hier met 4 aan dat ik mijn eigen ID heb waardoor de cadeau's alleen naar 'mijn database' worden verstuurd.
+        }),
+        headers: {
+            'Content-Type': 'application/json; charset=UTF-8'
+        }
+    });
+  }
  
   //Redirect naar de homepage
   response.redirect(303, '/');
